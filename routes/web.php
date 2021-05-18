@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CaracteristiqueController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,7 @@ Route::post('/users/{id}/download', [UserController::class,'download']);
 //Routes Portfolios
 Route::resource('/portfolios', PortfoliosController::class);
 Route::post('/portfolios/{id}/download', [PortfoliosController::class,'download']);
+
+
+// caracteristique
+Route::resource("/caracteristiques", CaracteristiqueController::class);
