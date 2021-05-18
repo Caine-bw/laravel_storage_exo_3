@@ -11,6 +11,13 @@
     @include('partials.navbar')
     @yield('content')
     
+
+
+    
+    <section>
+        @include('partials.footer')
+    </section>
+    
     <script src="{{ asset('js/app.js')}}"></script>
 </body>
 </html>
