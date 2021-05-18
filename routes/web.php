@@ -24,8 +24,10 @@ Route::resource('/users', UserController::class);
 Route::post('/users/{id}/download', [UserController::class,'download']);
 
 //Routes Portfolios
+
 Route::resource('/portfolios', PortfolioController::class);
 Route::post('/portfolios/{id}/download', [PortfolioController::class,'download']);
+
 
 
 // caracteristique
