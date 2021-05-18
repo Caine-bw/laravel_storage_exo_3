@@ -94,7 +94,7 @@ class PortfolioController extends Controller
         $portfolio = new portfolio();
         $portfolio->nom = $request->nom;
         Storage::disk('public')->delete('img/'. $portfolio->image);
-        $portfolio->catégorie = $request->catégorie;
+        $portfolio->categorie = $request->categorie;
         $portfolio->description = $request->description;
         $portfolio->image = $request->file("image")->hashName();
         $portfolio ->updated_at=now();
