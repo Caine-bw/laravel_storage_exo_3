@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\GalerieController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\CaracteristiqueController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PortfolioController;
@@ -32,3 +34,10 @@ Route::post('/portfolios/{id}/download', [PortfolioController::class,'download']
 
 // caracteristique
 Route::resource("/caracteristiques", CaracteristiqueController::class);
+
+//Galerie
+Route::resource("/galeries", GalerieController::class)->parameters(['galeries' => 'galerie']);
+Route::post('/galeries/{id}/download',[GalerieController::class,'download']);
+
+//Service
+Route::resource('/services', ServiceController::class);
