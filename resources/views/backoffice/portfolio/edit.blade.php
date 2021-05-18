@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('content')
     <section class="container">
-        <h2 class="text-center my-4 bg-danger">Edit portfolio</h2>
+        <h2 class="text-center my-4 bg-success">Edit portfolio</h2>
         <ul>
           @foreach ($errors->all() as $message) 
               <li>{{ $message }}</li>
@@ -22,10 +22,10 @@
               <div class="mb-3">
                 <label class="form-label">categorie</label>
                 <select name="categorie" id="">
-                    <option value="Developeur Web"> Developeur Web</option>
-                    <option value="Back End"> Back End </option>
-                    <option value="Front End"> Front End </option>
-                    <option value="Laravel"> Laravel </option>
+                  <option value="Item1">item1</option>
+                  <option value="Item2"> Item2 </option>
+                  <option value="Item3"> Item3</option>
+                  <option value="Item4"> Item4</option>
                 </select>
             </div>     
             <div class="mb-3">

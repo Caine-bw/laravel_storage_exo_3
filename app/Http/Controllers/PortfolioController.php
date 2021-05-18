@@ -40,12 +40,12 @@ class PortfolioController extends Controller
         $request->validate([
             "nom"=>"required",
             "image"=>"required",
-            "catégorie"=>"required",
+            "categorie"=>"required",
             "description"=>"required"
         ]);
         $portfolio = new portfolio();
         $portfolio->nom = $request->nom;
-        $portfolio->catégorie = $request->catégorie;
+        $portfolio->categorie = $request->categorie;
         $portfolio->description = $request->description;
         $portfolio->image = $request->file("image")->hashName();
         $portfolio ->updated_at=now();
@@ -88,7 +88,7 @@ class PortfolioController extends Controller
         $request->validate([
             "nom"=>"required",
             "image"=>"required",
-            "catégorie"=>"required",
+            "categorie"=>"required",
             "description"=>"required"
         ]);
         $portfolio = new portfolio();

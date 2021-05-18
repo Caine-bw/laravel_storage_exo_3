@@ -1,8 +1,8 @@
 @extends('layout.app')
 @section('content')
 
-    <div class="container">
-        <h1 class="text-danger text-center my-5" >Portfolios</h1>
+    <div class="container bg-light shadow mt-5">
+        <h1 class="text-primary text-center my-5" >Portfolios</h1>
         <a href={{ route("portfolios.create") }} class="btn btn-success "> Créer</a>
     
     @if (session('message'))

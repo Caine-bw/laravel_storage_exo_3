@@ -1,7 +1,7 @@
 @extends('layout/app')
 @section('content')
-    <div class="container">
-        <h1 class="text-danger">User</h1>
+    <div class="container bg-light shadow mt-5">
+        <h1 class="text-pirmary">User</h1>
         <a href={{ route("users.create") }} class="btn btn-primary">Creer</a>
 
     @if (session('message'))

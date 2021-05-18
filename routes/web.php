@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,5 +23,5 @@ Route::resource('/users', UserController::class);
 Route::post('/users/{id}/download', [UserController::class,'download']);
 
 //Routes Portfolios
-Route::resource('/portfolios', PortfoliosController::class);
-Route::post('/portfolios/{id}/download', [PortfoliosController::class,'download']);
+Route::resource('/portfolios', PortfolioController::class);
+Route::post('/portfolios/{id}/download', [PortfolioController::class,'download']);
