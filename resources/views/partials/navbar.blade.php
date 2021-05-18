@@ -1,4 +1,4 @@
-
+{{-- 
 <div class="container my-4">
     <ul class="nav nav-tabs justify-content-center">
         <li class="nav-item">
@@ -20,4 +20,29 @@
             <a class="nav-link {{ Route::currentRouteName() === 'galeries.index' ? 'active' : '' }}" href="{{ route('galeries.index') }}">Galeries</a>
         </li>
     </ul>
-</div>
+</div> --}}
+<div class="d-flex" id="wrapper">
+
+			<!-- Sidebar -->
+			<div class="bg-light border-right" id="sidebar-wrapper">
+				<div class="sidebar-heading">Start Bootstrap </div>
+				<div class="list-group list-group-flush">
+					<a href="#" class="list-group-item list-group-item-action bg-secondary active">Home</a>
+					<a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+					<a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+					<a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+					<a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+					<a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+				</div>
+			</div>
+			<!-- /#sidebar-wrapper -->
+
+			<!-- Page Content -->
+			<div id="page-content-wrapper">
+                @yield('content')
+			</div>
+			<!-- /#page-content-wrapper -->
+		</div>
+		<!-- /#wrapper -->
+
+
