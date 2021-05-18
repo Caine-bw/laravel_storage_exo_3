@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('content')
     <section class="container">
-        <h2 class="text-center my-4 bg-danger">Création Caractéristique</h2>
+        <h2 class="text-center my-4 bg-light shadow mt-5 ">Création Caractéristique</h2>
         <ul>
           @foreach ($errors->all() as $message) 
               <li>{{ $message }}</li>
@@ -14,7 +14,7 @@
               <label class="form-label">Icone</label>
               <select class="form-control fw-bold" name="icone">
                     <option value="fa-address-book"> Librairie</option>
-                    <option value="fa-taxi"> Taxi</option>
+                    <option value="fa-taxi fw-bold"> Taxi</option>
                     <option value="fa-hospital"> Hopital</option>
                     <option value="fa-cut"> Coiffeur</option>
                     <option value="fa-fire-extinguisher"> Pompier</option>
