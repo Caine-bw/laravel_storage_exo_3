@@ -33,16 +33,16 @@
             <td>{{ $user->mdp }}</td>
             <td><img src={{ asset('img/'. $user->pdp) }} alt=""></td>
             <td>
-                <div class="d-flex">
-                    <a href="/users/{{ $user->id }}/edit" class="btn btn-primary mx-1">Edit</a>
+                <div class="flex-column text-center mt-1">
+                    <a href="/users/{{ $user->id }}/edit" class="btn btn-primary mx-1 mt-2">Edit</a>
                     <form action="/users/{{ $user->id }}" method="POST">
                         @csrf
                         @method('delete')
-                        <button class="btn btn-danger mx-1" type="submit">Delete</button>
+                        <button class="btn btn-danger mx-1 mt-2" type="submit">Delete</button>
                     </form>
                     <form action="/users/{{ $user->id }}/download" method="POST">
                         @csrf
-                        <button class="btn btn-warning mx-1" type="submit">Download</button>
+                        <button class="btn btn-warning mx-1 mt-2" type="submit">Download</button>
                     </form>
                 </div>
             </td>
