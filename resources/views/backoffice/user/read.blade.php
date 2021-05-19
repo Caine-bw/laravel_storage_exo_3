@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="d-flex justify-content-center mt-5 shadow">
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 25rem;">
         <img src="{{ asset("img/" . $user->pdp) }}" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">User : {{$user->id}}</h5>

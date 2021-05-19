@@ -29,7 +29,7 @@
             <td>{{ $user->age }}</td>
             <td>{{ $user->email }}</td>
             <td>{{ $user->mdp }}</td>
-            <td><img src={{ asset('img/'. $user->pdp) }} alt=""></td>
+            <td><img style="height : 200px" style="width : 300px" src={{ asset('img/'. $user->pdp) }} alt=""></td>
             <td>
                 <div class="flex-column text-center mt-1">
                     <a href="/users/{{ $user->id }}/edit" class="btn btn-secondary mx-1 mt-2 text-white"><i class="fas fa-pencil-alt"></i> Edit</a>

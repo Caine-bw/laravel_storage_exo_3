@@ -1,6 +1,10 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('./fonts/indie_flower');
+// @font-face{
+//     font-family: "indie_flower";
+//     src: url('/public/fonts/indie_flower');
+// }
 
 // Variables
 @import 'variables';
@@ -20,5 +24,11 @@ select {
     font-weight: 900 !important;
 }
 
-//navbar
+/////////////////////////////////////////
+
+
+
+
+
+
 

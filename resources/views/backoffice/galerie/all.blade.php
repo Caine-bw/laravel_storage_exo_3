@@ -1,10 +1,8 @@
 @extends('layout.app')
 @section('content')
 
-    <div class="container">
-        <h1 class="text-danger text-center my-5" >Galeries</h1>
-        <a href={{ route("galeries.create") }} class="btn btn-success "> Créer</a>
-    
+    <div class="container shadow mx-5">
+        <h1 class="text-center my-5 border-bottom" >Galeries</h1>
     @if (session('message'))
         <div class="alert alert-success">
             {{ session('message') }}
@@ -25,22 +23,22 @@
             @foreach ($galeries as $galerie)
             
             <tr>
-              <th scope="row">{{ $galerie->id }}</th>
-              <td><a href="/galeries/{{ $galerie->id }}">{{ $galerie->nom}}</a></td>
-              <td><img style="width : 200px" src={{ asset('img/'. $galerie->image) }} alt=""></td>
-              <td>{{ $galerie->description }}</td>
+              <th class="fs-4" scope="row">{{ $galerie->id }}</th>
+              <td ><a href="/galeries/{{ $galerie->id }}">{{ $galerie->nom}}</a></td>
+              <td class="fs-4"><img style="width : 300px" src={{ asset('img/'. $galerie->image) }} alt=""></td>
+              <td class="fs-4">{{ $galerie->description }}</td>
               
               <td>
                   <div class="d-flex ">
-                      <a href="/galeries/{{ $galerie->id }}/edit" class="btn btn-primary mx-1">Edit</a>
+                      <a href="/galeries/{{ $galerie->id }}/edit" class="btn btn-secondary mx-1 mt-2 text-white"><i class="fas fa-pencil-alt"></i></a>
                     <form action="/galeries/{{ $galerie->id }}" method="POST">
                         @csrf
                         @method('delete')
-                        <button class="btn btn-danger mx-1 " type="submit">Delete</button>
+                        <button class="btn btn-danger text-white mx-1 mt-2" type="submit"><i class="fas fa-times-circle"></i></button>
                     </form>
                     <form action="/galeries/{{ $galerie->id }}/download" method="POST">
                         @csrf
-                        <button class="btn btn-warning mx-1" type="submit">Download</button>
+                        <button class="btn text-secondary btn-warning mx-1 mt-2" type="submit"><i class="fas fa-arrow-circle-down"></i></button>
                     </form>
                   </div>
               </td>
@@ -52,6 +50,9 @@
       </table>
       <div>
           {{ $galeries->links() }}
+      </div>
+      <div class="d-flex justify-content-end pb-3 pt-5 ">
+        <a href={{ route("galeries.create") }} class="btn btn-primary text-white"><i class="fas fa-plus-circle"></i></a>
       </div>
     </div>
 @endsection

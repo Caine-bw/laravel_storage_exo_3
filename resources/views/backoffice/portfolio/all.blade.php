@@ -14,7 +14,7 @@
             <th scope="col">#</th>
             <th scope="col">Nom</th>
             <th scope="col">Image</th>
-            <th scope="col">categorie</th>
+            <th scope="col">Categorie</th>
             <th scope="col">description</th>
             <th scope="col">Action</th>
 
@@ -32,7 +32,7 @@
               
               <td>
                   <div class="d-flex ">
-                      <a href="/portfolios/{{ $portfolio->id }}/edit" class="btn btn-primary mx-1 mt-2 text-white"><i class="fas fa-pencil-alt"></i> </a>
+                      <a href="/portfolios/{{ $portfolio->id }}/edit" class="btn btn-primary mx-1 mt-2 text-white"><i class="fas fa-pencil-alt"></i></a>
                     <form action="/portfolios/{{ $portfolio->id }}" method="POST">
                         @csrf
                         @method('delete')
