@@ -1,14 +1,14 @@
 @extends('layout.app')
 @section('content')
 
-    <div class="container-fluid mx-5">
-        <h1 class="text-dark sahdow text-center my-5">Service</h1>
+    <div class="container-fluid  mx-5">
+        <h1 class=" text-dark text-center my-5">Service</h1>
     @if (session('message'))
         <div class="alert alert-success">
             {{ session('message') }}
         </div>
     @endif
-    <table class="table mx-5">
+    <table class="table mx-5 ">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -32,7 +32,7 @@
                     <form action="/services/{{ $service->id }}" method="POST">
                         @csrf
                         @method('delete')
-                        <button class="btn btn-danger text-white mx-1" type="submit"><i class="fas fa-times-circle"></i></button>
+                        <button class="btn btn-danger text-white ms-1" type="submit"><i class="fas fa-times-circle"></i></button>
                     </form>
                   </div>
               </td>

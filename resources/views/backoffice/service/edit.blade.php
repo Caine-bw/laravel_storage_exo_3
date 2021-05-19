@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('content')
-    <section class="container shadow justify-content-center ">
-        <h2 class="text-center my-4">Édition Service</h2>
+    <section class="container-fluid mx-5 shadow ">
+        <h2 class="text-center pt-5 my-4 mx-5 border-bottom fs-1">Édition Service</h2>
         <ul>
           @foreach ($errors->all() as $message) 
               <li>{{ $message }}</li>
@@ -37,9 +37,9 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Description</label>
-                <input value="{{ $service->description }}" type="text" class="form-control" name="description">
+                <input value="{{ $service->description }}" type="text" class="form-control py-5" name="description">
             </div>
-            <button type="submit" class="btn btn-primary mb-2 w-100">Submit</button>
+            <button type="submit" class="btn btn-primary text-white w-100 mb-3 mt-5">Submit</button>
           </form>
     </section>
 @endsection
